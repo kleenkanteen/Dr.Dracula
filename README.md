@@ -1,6 +1,6 @@
 <!-- Designed for LEAP24 hackathon 03.2024-->
 <div id="header" align="center">
-  <img src="https://lablab.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Flablab-static-eu%2Fimages%2Fevents%2Fclsvwsh8m000x3b6rhvbmf7cf%2Fundefined_imageLink_xbaa800rg.jpg&w=1080&q=75" width="250" height="180"/>
+  <img src="https://lablab.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Flablab-static-eu%2Fimages%2Fevents%2Fclsvwsh8m000x3b6rhvbmf7cf%2Fundefined_imageLink_xbaa800rg.jpg&w=1080&q=75" width="1050" height="400"/>
 </div>
   <h1 align="center">APP NAME</h1>
 
@@ -56,7 +56,7 @@ APP DESCRIPTION
 **Step #1** - Clone the project
 
 ```bash
-$ git clone https://github.com/MrRaccxxn/desci-dao
+$ git clone https://github.com/kleenkanteen/leap-hackathon
 ```
 
 **Step #2**
