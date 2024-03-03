@@ -56,7 +56,7 @@ APP DESCRIPTION
 **Step #1** - Clone the project
 
 ```bash
-$ git clone https://github.com/MrRaccxxn/desci-dao
+$ git clone https://github.com/kleenkanteen/leap-hackathon
 ```
 
 **Step #2**
