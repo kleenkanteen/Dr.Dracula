@@ -74,6 +74,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Running the app
 
+**Using Docker Compose**
+
+```bash
+docker-compose up --build
+```
+
 **Pull the image from Docker Hub**
 
 ```bash
