@@ -20,7 +20,8 @@ APP DESCRIPTION
 - [Screenshots](#screenshots)
 - [Technology Stack](#technology-stack)
 - [Features](#features)
-- [How to use the app](#how-to-use-the-app)
+- [How to use the app locally](#how-to-use-the-app)
+- [Using Docker to run the app](#using-docker-to-run-the-app)
 - [Authors](#authors)
 - [License](#license)
 
