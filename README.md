@@ -72,7 +72,7 @@ $ git clone https://github.com/kleenkanteen/leap-hackathon
 - To start the webapp, run: `npm start` OR `yarn start`
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Using Docker the app
+## Using Docker to run the app
 
 **Step #1**
 
