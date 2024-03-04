@@ -51,7 +51,7 @@ APP DESCRIPTION
 - FEATURE 1
 - FEATURE 1
 
-## How to use the app
+## How to use the app locally
 
 **Step #1** - Clone the project
 
@@ -72,13 +72,19 @@ $ git clone https://github.com/kleenkanteen/leap-hackathon
 - To start the webapp, run: `npm start` OR `yarn start`
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Running the app
+## Using Docker the app
 
-**Pull the image from Docker Hub**
+**Step #1**
 
 ```bash
 docker pull sandramsc/leap-hackathon
 ```
+
+**Step #2**
+```bash
+docker run -p 3000:3000 sandramsc/leap-hackathon
+```
+
 
 ## Authors
 
