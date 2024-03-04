@@ -1,0 +1,22 @@
+name: publish
+
+#on: [push]
+
+jobs:
+  publish-leap24-image:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Login to GitHub Conatiner Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.CR_PAT }}
+        
+    - name: Build the LEAP24 Docker image
+      run: |
+          docker build . --tag ghcr.io/sandramsc/leap-hackathon:latest
+          docker push ghcr.io/sandramsc/leap-hackathon:latest
