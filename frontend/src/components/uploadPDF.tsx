@@ -43,7 +43,7 @@ export function UploadPDF() {
   };
 
   return (
-    <Card>
+    <Card className="lg:max-w-md w-full upload-blood-card">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="w-full p-10">
           <CardHeader>

@@ -74,3 +74,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.upload-blood-card {
+  margin: auto;
+  margin-top: 24px;
+}
