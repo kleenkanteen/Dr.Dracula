@@ -35,7 +35,6 @@ try:
 
     if test_about:
         # Extracting what the test measures
-<<<<<<< HEAD
         test_measures = test_about.find_next_sibling('h3', string='What does the test measure?')
         if test_measures:
             print("What the test measures:")
@@ -62,30 +61,6 @@ try:
                     print("-", li.text.strip())
         else:
             print("No content found for the purpose of the test.")
-=======
-        test_measures = test_about.find_next('h3', string='What does the test measure?')
-        if test_measures:
-            print("What the test measures:", test_measures.text.strip())  # Use text attribute
-        else:
-            print("Could not find the purpose of the test.")
-
-        # Extracting test result interpretation
-        test_interpretation = test_about.find_next('h3', string='Interpreting test results')
-        if test_interpretation:
-            print("Purpose of the Test:", test_interpretation.text.strip())  # Use text attribute
-        else:
-            print("Could not find the purpose of the test.")
-
-        # Extracting bullet points within specific sections
-        bullet_points = test_about.find_next('ul')  # Find the next unordered list
-        if bullet_points:
-            print("Bullet Points:")
-            for li in bullet_points.find_all('li'):  # Find all list items within the unordered list
-                print("-", li.text.strip())  # Use text attribute to get the text content
-        else:
-            print("No bullet points found.")
-
->>>>>>> 23f3b3a99a00385111c68ce26966e67822dcffb3
     else:
         print("No relevant information found on the page.")
 
