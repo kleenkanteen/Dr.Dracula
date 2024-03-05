@@ -28,17 +28,18 @@ try:
 
     # Find relevant sections containing information about cholesterol testing
     test_about = soup.find('h2', string='About the Test')
+    test_results = soup.find('h2', string='LDL Cholesterol Test Results')
 
     if test_about:
         # Extracting what the test measures
-        test_measurements = test_about.find_next('h3', id='h3-A4tYha')
-        if test_measurements: 
-            print("What the Test Measures:", test_measurements.text.strip())  # Use text attribute
+        test_measures = test_about.find_next('h3', string='What does the test measure?')
+        if test_measures:
+            print("What the test measures:", test_measures.text.strip())  # Use text attribute
         else:
-            print("Could not find what the test measures.")
+            print("Could not find the purpose of the test.")
 
         # Extracting test result interpretation
-        test_interpretation = test_about.find_next('h3', string='Interpreting Test Results')
+        test_interpretation = test_about.find_next('h3', string='Interpreting test results')
         if test_interpretation:
             print("Purpose of the Test:", test_interpretation.text.strip())  # Use text attribute
         else:
