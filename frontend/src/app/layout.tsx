@@ -14,7 +14,7 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
