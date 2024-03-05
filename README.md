@@ -62,16 +62,14 @@ $ git clone https://github.com/kleenkanteen/leap-hackathon
 
 **Step #2**
 
-- Install dependencies: `npm i` OR `yarn`
+- `cd` into the `frontend` folder and type `yarn`. Please stick to yarn for consistency with the team.
+- Run `yarn run dev` to run the nextjs frontend
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**Step #3**
+In a separate terminal, do this:
+- `cd` into the `backend` folder. Now type `pip install -r requirements.txt` to install the python dependencies.
+- Run `uvicorn main:app --reload` to run the fastapi server on port 8000 with hot reload on.
 
-- To build the webapp, run: `npm build` OR `yarn build`
-
-**Step #4**
-
-- To start the webapp, run: `npm start` OR `yarn start`
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Using Docker to run the app
 
@@ -102,6 +100,7 @@ docker run -p 3000:3000 sandramsc/leap-hackathon
 | Vincent Castro | https://github.com/risingsunomi |
 | Sabih Sarowar | https://github.com/kleenkanteen |
 | Sandra Ashipala | https://github.com/sandramsc |
+| Mazen Mamdouh | https://github.com/MazenMamdouh371 |
 
 
 ## License
