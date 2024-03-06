@@ -93,10 +93,15 @@ async def upload_pdf(
     file: Annotated[bytes, File()],
     ):
     # dont have to save it locally as a file actually, just added it to test that we get the file from the frontend and I can open it properly
-    with open("bloods.pdf", "wb+") as file_object:
+    with open("temp/bloods.pdf", "wb+") as file_object:
         file_object.write(file)
 
-    biomarker_values = extract_biomarker_values(read_pdf("bloods.pdf"))
+    biomarker_values = extract_biomarker_values(read_pdf("temp/bloods.pdf"))
+
+    # write biomarker_values to a local txt file 
+    with open("temp/biomarker_values.txt", "w") as f:
+        for item in biomarker_values:
+            f.write(f"{item}\n")
     
     return {
         "file_size": len(file),
