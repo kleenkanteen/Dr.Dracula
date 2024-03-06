@@ -21,6 +21,9 @@ def scrape_section_text(url, id_string):
     Returns:
     - str: The extracted text content.
     """
+    hdr = {'User-Agent': 'Mozilla/5.0'}
+    ctx = ssl.create_default_context()
+
     req = urllib.request.Request(url, headers=hdr)
 
     # Send a GET request to the URL
@@ -38,8 +41,29 @@ def scrape_section_text(url, id_string):
 
         # Check if the matching element is found
         if matching_element:
-            # Extract text content from all <p> and <h3> elements within the matching section
-            text_content = '\n'.join([element.get_text(strip=True) for element in matching_element.find_all(['p', 'h3', 'li'])])
+            # Initialize the text content
+            text_content = ''
+
+            # Process tables separately
+            tables = matching_element.find_all('table')
+            for table in tables:
+                # Extract table data
+                table_data = []
+                for row in table.find_all('tr'):
+                    row_data = [cell.get_text(strip=True) for cell in row.find_all(['td', 'th'])]
+                    table_data.append(row_data)
+
+                # Convert table data to an ASCII table
+                ascii_table = '\n'.join([' | '.join(row) for row in table_data])
+                
+                # Append the ASCII table to the text content
+                text_content += f'\n\nTable:\n{ascii_table}\n\n'
+
+            # Extract text content from all <p>, <h3>, <li>, <strong> elements within the matching section
+            other_content = '\n'.join([element.get_text(strip=True) for element in matching_element.find_all(['p', 'h3', 'li', 'strong'])])
+
+            # Append the other content to the text content
+            text_content += other_content
 
             # Return the extracted text content
             return text_content
@@ -61,7 +85,7 @@ def create_test_dict(url):
     html = reqOpen.read()
     soup = BeautifulSoup(html, 'html.parser')
     test_name = soup.find('h1')
-    interpreting_result = scrape_section_text(url, "interpreting")
+    interpreting_result = scrape_section_text(url, "results")
     about_result = scrape_section_text(url, "about")
     result = {
         "name": test_name.text,
