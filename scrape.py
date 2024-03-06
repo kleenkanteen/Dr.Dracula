@@ -67,6 +67,9 @@ def scrape_data(url):
 urls = [
     "https://www.testing.com/tests/ldl-cholesterol/",
     "https://www.testing.com/tests/non-high-density-lipoprotein-cholesterol/"
+    "https://www.testing.com/tests/at-home-cholesterol-test/"
+    "https://www.testing.com/tests/hdl-cholesterol/"
+    "https://www.testing.com/tests/direct-ldl-cholesterol/"
     # Add more URLs here
 ]
 
