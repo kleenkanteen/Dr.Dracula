@@ -75,7 +75,7 @@
   }
 }
 
-.upload-blood-card {
+.results-card, .upload-blood-card {
   margin: auto;
   margin-top: 24px;
 }
