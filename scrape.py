@@ -1,61 +1,73 @@
-import urllib.request
+import requests
 from bs4 import BeautifulSoup
 import ssl
+import urllib.request
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-url = "https://www.testing.com/tests/ldl-cholesterol/"
-print("Retrieving:", url)
-
-
 hdr = {'User-Agent': 'Mozilla/5.0'}
 
-# Add a user-agent header to the request
-req = urllib.request.Request(url, headers=hdr)
-try:
-    html = urllib.request.urlopen(req, context=ctx).read()
+def scrape_section_text(url, id_string):
+    """
+    Scrape the text content of a section with a matching ID on a website.
+
+    Parameters:
+    - url (str): The URL of the website.
+    - id_string (str): The string to match against element IDs.
+
+    Returns:
+    - str: The extracted text content.
+    """
+    req = urllib.request.Request(url, headers=hdr)
+
+    # Send a GET request to the URL
+    reqOpen = urllib.request.urlopen(req, context=ctx)
+
+    html = reqOpen.read()
+
+    # Check if the request was successful (status code 200)
+    if reqOpen.getcode() == 200:
+        # Parse the HTML content using BeautifulSoup
+        soup = BeautifulSoup(html, 'html.parser')
+
+        # Find the element with the matching ID string
+        matching_element = soup.find(lambda tag: tag.name == 'section' and id_string in (tag.get('id') or ''))
+
+        # Check if the matching element is found
+        if matching_element:
+            # Extract text content from all <p> and <h3> elements within the matching section
+            text_content = '\n'.join([element.get_text(strip=True) for element in matching_element.find_all(['p', 'h3', 'li'])])
+
+            # Return the extracted text content
+            return text_content
+        else:
+            return f"Element with ID containing '{id_string}' not found on the page."
+    else:
+        return f"Failed to retrieve the page. Status code: {reqOpen.getcode()}"
+
+def create_test_dict(url):
+    """
+    Returns a dictionary with the name, types, about, and interpreting results of a test, to be ready
+    for inserting into the database
+    """
+    req = urllib.request.Request(url, headers=hdr)
+
+    # Send a GET request to the URL
+    reqOpen = urllib.request.urlopen(req, context=ctx)
+
+    html = reqOpen.read()
     soup = BeautifulSoup(html, 'html.parser')
-
-    # Find the title
-    test_title = soup.find('h1')
-    if test_title:
-        print("Test Title:", test_title.text.strip())  # Use text attribute to get the text content
-    else:
-        print("Could not find the test title.")
-
-    # Find relevant sections containing information about cholesterol testing
-    test_about = soup.find('h2', string='About the Test')
-    test_results = soup.find('h2', string='LDL Cholesterol Test Results')
-
-    if test_about:
-        # Extracting what the test measures
-        test_measures = test_about.find_next('h3', string='What does the test measure?')
-        if test_measures:
-            print("What the test measures:", test_measures.text.strip())  # Use text attribute
-        else:
-            print("Could not find the purpose of the test.")
-
-        # Extracting test result interpretation
-        test_interpretation = test_about.find_next('h3', string='Interpreting test results')
-        if test_interpretation:
-            print("Purpose of the Test:", test_interpretation.text.strip())  # Use text attribute
-        else:
-            print("Could not find the purpose of the test.")
-
-        # Extracting bullet points within specific sections
-        bullet_points = test_about.find_next('ul')  # Find the next unordered list
-        if bullet_points:
-            print("Bullet Points:")
-            for li in bullet_points.find_all('li'):  # Find all list items within the unordered list
-                print("-", li.text.strip())  # Use text attribute to get the text content
-        else:
-            print("No bullet points found.")
-
-    else:
-        print("No relevant information found on the page.")
-
-except Exception as e:
-    print("Error fetching content:", e)
+    test_name = soup.find('h1')
+    interpreting_result = scrape_section_text(url, "interpreting")
+    about_result = scrape_section_text(url, "about")
+    types_result = scrape_section_text(url, "types")
+    result = {
+        "name": test_name.text,
+        "interpreting_result": interpreting_result,
+        "about": about_result,
+        "types": types_result
+    }
+    return result
