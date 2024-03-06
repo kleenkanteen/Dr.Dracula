@@ -2,7 +2,7 @@
 <div id="header" align="center">
   <img src="https://lablab.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Flablab-static-eu%2Fimages%2Fevents%2Fclsvwsh8m000x3b6rhvbmf7cf%2Fundefined_imageLink_xbaa800rg.jpg&w=1080&q=75" width="1050" height="400"/>
 </div>
-  <h1 align="center">APP NAME</h1>
+  <h1 align="center">Dr. Dracula</h1>
 
 ## Application Description
 
@@ -11,7 +11,7 @@ APP DESCRIPTION
 ## Table of Contents
 
 <details>
-<summary>APP NAME</summary>
+<summary>Dr. Dracula</summary>
 
 - [Application Description](#application-description)
 - [Table of Contents](#table-of-contents)
