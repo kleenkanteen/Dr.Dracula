@@ -1,7 +1,9 @@
 import requests
+import os
 from bs4 import BeautifulSoup
 import ssl
 import urllib.request
+from supabase import create_client, Client
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
@@ -84,12 +86,51 @@ def create_test_dict(url):
 
     html = reqOpen.read()
     soup = BeautifulSoup(html, 'html.parser')
+
     test_name = soup.find('h1')
-    interpreting_result = scrape_section_text(url, "results")
     about_result = scrape_section_text(url, "about")
+    interpreting_result = scrape_section_text(url, "results")
     result = {
         "name": test_name.text,
-        "interpreting_result": interpreting_result,
         "about": about_result,
+        "interpreting_result": interpreting_result,
     }
     return result
+
+# Define a list of URLs
+urls = [
+    "https://www.testing.com/tests/creatinine/",
+    "https://www.testing.com/tests/sodium/",
+    "https://www.testing.com/tests/potassium/",
+    "https://www.testing.com/tests/alkaline-phosphatase-alp/",
+    "https://www.testing.com/tests/alanine-aminotransferase-alt/",
+    "https://www.testing.com/tests/cholesterol/",
+    "https://www.testing.com/tests/triglycerides/",
+    "https://www.testing.com/tests/hdl-cholesterol/",
+    "https://www.testing.com/tests/ldl-cholesterol/",
+    "https://www.testing.com/tests/non-high-density-lipoprotein-cholesterol/",
+    "https://www.testing.com/tests/bilirubin/",
+    "https://www.testing.com/tests/ldl-cholesterol/",
+    "https://www.testing.com/tests/at-home-cholesterol-test/",
+    "https://www.testing.com/tests/hdl-cholesterol/",
+    "https://www.testing.com/tests/direct-ldl-cholesterol/"
+]
+
+# supabase docs: https://supabase.com/docs/reference/python/insert
+# url: str = os.getenv("SUPABASE_URL")
+# key: str = os.getenv("SUPABASE_KEY")
+# hard code the above 2 variables for now as os.getenv() to load from .env is not working for me
+supabase: Client = create_client(url, key)
+
+# Open the file for writing
+with open("backend/biomarker_reference.txt", "w", encoding='utf-8') as file:
+    for url in urls:
+        result = create_test_dict(url)
+        
+        # Write the test dictionary to the file
+        for key, value in result.items():
+            file.write(f"{value}\n")
+        
+        data, count = supabase.table('biomarker_reference').insert({"biomarker": result["name"], "about": result["about"], "interpreting_result": result["interpreting_result"]}).execute()
+
+        file.write("\n")
