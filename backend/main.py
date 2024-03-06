@@ -52,7 +52,7 @@ def contains_alphabet(input_string):
             return True
     return False
 
-def check_for_biomarkers(test_file_path: str):
+def extract_biomarker_values(test_file_path: str):
     """
     A function to check a generated .txt file for biomarkers and make the dictionaries for the blood test
     """
@@ -96,9 +96,9 @@ async def upload_pdf(
     with open("bloods.pdf", "wb+") as file_object:
         file_object.write(file)
 
-    result = check_for_biomarkers(read_pdf("bloods.pdf"))
+    biomarker_values = extract_biomarker_values(read_pdf("bloods.pdf"))
     
     return {
         "file_size": len(file),
-        "result": result,
+        "biomarker_values": biomarker_values,
     }
