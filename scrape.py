@@ -50,7 +50,7 @@ def scrape_section_text(url, id_string):
 
 def create_test_dict(url):
     """
-    Returns a dictionary with the name, types, about, and interpreting results of a test, to be ready
+    Returns a dictionary with the name, about, and interpreting results of a test, to be ready
     for inserting into the database
     """
     req = urllib.request.Request(url, headers=hdr)
@@ -63,11 +63,9 @@ def create_test_dict(url):
     test_name = soup.find('h1')
     interpreting_result = scrape_section_text(url, "interpreting")
     about_result = scrape_section_text(url, "about")
-    types_result = scrape_section_text(url, "types")
     result = {
         "name": test_name.text,
         "interpreting_result": interpreting_result,
         "about": about_result,
-        "types": types_result
     }
     return result
