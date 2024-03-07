@@ -11,11 +11,8 @@
     "postinstall": "prisma generate",
     "lint": "next lint",
     "start": "next start",
-    "build-ui": "react-scripts build",
-    "test-ui": "react-scripts test",
-    "eject-ui": "react-scripts eject",
-    "dev:ui": "next dev",
-    "dev:backend": "next dev"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
