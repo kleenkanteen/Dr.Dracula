@@ -55,9 +55,8 @@ A web application that allows users to understand their blood test results quick
 
 
 ## Screenshots
-
-![pic222](https://github.com/kleenkanteen/Dr.Dracula/assets/19821445/3157c83e-abcf-45fb-8240-ebb00053982b)
 ![pic111](https://github.com/kleenkanteen/Dr.Dracula/assets/19821445/bcbd74d8-7a34-4444-888e-9edae922f2f4)
+![pic222](https://github.com/kleenkanteen/Dr.Dracula/assets/19821445/3157c83e-abcf-45fb-8240-ebb00053982b)
 
 ## How to use the app locally
 
