@@ -1,136 +1,88 @@
-import requests
-import os
+import urllib.request, os, ssl
 from bs4 import BeautifulSoup
-import ssl
-import urllib.request
 from supabase import create_client, Client
+
+# supabase docs: https://supabase.com/docs/reference/python/insert
+url: str = os.environ.get("SUPABASE_URL")
+key: str = os.environ.get("SUPABASE_KEY")
+supabase: Client = create_client(url, key)
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-hdr = {'User-Agent': 'Mozilla/5.0'}
+def scrape_data(url):
+    print("Retrieving:", url)
 
-def scrape_section_text(url, id_string):
-    """
-    Scrape the text content of a section with a matching ID on a website.
-
-    Parameters:
-    - url (str): The URL of the website.
-    - id_string (str): The string to match against element IDs.
-
-    Returns:
-    - str: The extracted text content.
-    """
     hdr = {'User-Agent': 'Mozilla/5.0'}
-    ctx = ssl.create_default_context()
 
+    # Add a user-agent header to the request
     req = urllib.request.Request(url, headers=hdr)
-
-    # Send a GET request to the URL
-    reqOpen = urllib.request.urlopen(req, context=ctx)
-
-    html = reqOpen.read()
-
-    # Check if the request was successful (status code 200)
-    if reqOpen.getcode() == 200:
-        # Parse the HTML content using BeautifulSoup
+    try:
+        html = urllib.request.urlopen(req, context=ctx).read()
         soup = BeautifulSoup(html, 'html.parser')
 
-        # Find the element with the matching ID string
-        matching_element = soup.find(lambda tag: tag.name == 'section' and id_string in (tag.get('id') or ''))
-
-        # Check if the matching element is found
-        if matching_element:
-            # Initialize the text content
-            text_content = ''
-
-            # Process tables separately
-            tables = matching_element.find_all('table')
-            for table in tables:
-                # Extract table data
-                table_data = []
-                for row in table.find_all('tr'):
-                    row_data = [cell.get_text(strip=True) for cell in row.find_all(['td', 'th'])]
-                    table_data.append(row_data)
-
-                # Convert table data to an ASCII table
-                ascii_table = '\n'.join([' | '.join(row) for row in table_data])
-                
-                # Append the ASCII table to the text content
-                text_content += f'\n\nTable:\n{ascii_table}\n\n'
-
-            # Extract text content from all <p>, <h3>, <li>, <strong> elements within the matching section
-            other_content = '\n'.join([element.get_text(strip=True) for element in matching_element.find_all(['p', 'h3', 'li', 'strong'])])
-
-            # Append the other content to the text content
-            text_content += other_content
-
-            # Return the extracted text content
-            return text_content
+        # Find the title
+        test_title = soup.find('h1')
+        if test_title:
+            print(test_title.text.strip())  # Use text attribute to get the text content
         else:
-            return f"Element with ID containing '{id_string}' not found on the page."
-    else:
-        return f"Failed to retrieve the page. Status code: {reqOpen.getcode()}"
+            print("Could not find the test title.")
 
-def create_test_dict(url):
-    """
-    Returns a dictionary with the name, about, and interpreting results of a test, to be ready
-    for inserting into the database
-    """
-    req = urllib.request.Request(url, headers=hdr)
 
-    # Send a GET request to the URL
-    reqOpen = urllib.request.urlopen(req, context=ctx)
+        test_measures = soup.find('h3', string='What does the test measure?')
+        if test_measures:
+            # the following code does not work for different patterns of paragraph and lists. it only looks for paragraphs, then lists. 
+            # we have to handle multiple cases, for example with 2 pages:
+            # https://www.testing.com/tests/ldl-cholesterol/, in the section "What does the test measure?", the order is p, then p, then ul, then p, then ul, then p
+            # https://www.testing.com/tests/non-high-density-lipoprotein-cholesterol/, in the section "What does the test measure?", has a different pattern then above.
+            # it is p, then ul, then p.
 
-    html = reqOpen.read()
-    soup = BeautifulSoup(html, 'html.parser')
+            print("What the test measures:")
+            # Print the text content of any <p> tags
+            for paragraph in test_measures.find_next_siblings('p'):
+                print(paragraph.text.strip())
+            # Print the text content of any <ul> tags
+            for ul in test_measures.find_next_siblings('ul'):
+                for li in ul.find_all('li'):
+                    print("-", li.text.strip())
+        else:
+            print("No content found for what the test measures.")
 
-    test_name = soup.find('h1')
-    about_result = scrape_section_text(url, "about")
-    interpreting_result = scrape_section_text(url, "results")
-    result = {
-        "name": test_name.text,
-        "about": about_result,
-        "interpreting_result": interpreting_result,
-    }
-    return result
 
-# Define a list of URLs
+        interpret_test = soup.find('h3', string='Interpreting test results')
+        if interpret_test:
+            # the following code does not work for tables where the value ranges are shown
+            # it also does not work on different patterns of paragraph and lists like the above block of code
+            
+            print("Interpret test results:")
+            # Print the text content of any <p> tags
+            for paragraph in interpret_test.find_next_siblings('p'):
+                print(paragraph.text.strip())
+            # Print the text content of any <ul> tags
+            for ul in interpret_test.find_next_siblings('ul'):
+                for li in ul.find_all('li'):
+                    print("-", li.text.strip())
+        else:
+            print("No content found for the purpose of the test.")
+
+    except Exception as e:
+        print("Error fetching content:", e)
+
+# List of URLs to scrape
 urls = [
-    "https://www.testing.com/tests/creatinine/",
-    "https://www.testing.com/tests/sodium/",
-    "https://www.testing.com/tests/potassium/",
-    "https://www.testing.com/tests/alkaline-phosphatase-alp/",
-    "https://www.testing.com/tests/alanine-aminotransferase-alt/",
-    "https://www.testing.com/tests/cholesterol/",
-    "https://www.testing.com/tests/triglycerides/",
-    "https://www.testing.com/tests/hdl-cholesterol/",
-    "https://www.testing.com/tests/ldl-cholesterol/",
-    "https://www.testing.com/tests/non-high-density-lipoprotein-cholesterol/",
-    "https://www.testing.com/tests/bilirubin/",
-    "https://www.testing.com/tests/ldl-cholesterol/",
-    "https://www.testing.com/tests/at-home-cholesterol-test/",
-    "https://www.testing.com/tests/hdl-cholesterol/",
-    "https://www.testing.com/tests/direct-ldl-cholesterol/"
+    # just test one at a time
+    "https://www.testing.com/tests/ldl-cholesterol/"
+    # "https://www.testing.com/tests/non-high-density-lipoprotein-cholesterol/",
+    # "https://www.testing.com/tests/at-home-cholesterol-test/",
+    # "https://www.testing.com/tests/hdl-cholesterol/",
+    # "https://www.testing.com/tests/direct-ldl-cholesterol/"
+    # Add more URLs here
 ]
 
-# supabase docs: https://supabase.com/docs/reference/python/insert
-# url: str = os.getenv("SUPABASE_URL")
-# key: str = os.getenv("SUPABASE_KEY")
-# hard code the above 2 variables for now as os.getenv() to load from .env is not working for me
-supabase: Client = create_client(url, key)
-
-# Open the file for writing
-with open("backend/biomarker_reference.txt", "w", encoding='utf-8') as file:
-    for url in urls:
-        result = create_test_dict(url)
-        
-        # Write the test dictionary to the file
-        for key, value in result.items():
-            file.write(f"{value}\n")
-        
-        data, count = supabase.table('biomarker_reference').insert({"biomarker": result["name"], "about": result["about"], "interpreting_result": result["interpreting_result"]}).execute()
-
-        file.write("\n")
+# Scrape data from each URL in the list
+for i, url in enumerate(urls, start=1):
+    scrape_data(url)
+    if i < len(urls):
+        print("-" * 40)  # Add a separator between URL outputs
