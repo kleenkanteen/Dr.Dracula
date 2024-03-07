@@ -19,7 +19,7 @@ const Footer: FC = () => {
               <a href="#"><img src={navIcon2} alt="Icon" /></a>
               <a href="#"><img src={navIcon3} alt="Icon" /></a>
             </div>
-            <p>Copyright 2024. Dr. Cracula, All Rights Reserved</p>
+            <p>Copyright 2024. Dr. Dracula, All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
