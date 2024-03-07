@@ -2,10 +2,12 @@ version: "3"
 
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     hostname: web
     volumes:
-      - .:/app
+      - ./frontend:/app/frontend  # Mount frontend directory
+      - ./backend:/app/backend    # Mount backend directory
     ports:
       - "3000:3000"
-    
