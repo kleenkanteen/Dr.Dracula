@@ -1,6 +1,6 @@
 <!-- Designed for LEAP24 hackathon 03.2024-->
 <div id="header" align="center">
-  <img src="./frontend/src/assets/img/drdracula-logo.png" width="800" height="400"/>
+  <img src="./frontend/src/assets/img/drdracula-logo.png" width="700" height="400"/>
 </div>
   <h1 align="center">Dr. Dracula</h1>
    <h3 align="center">Simplifying Blood Test Analysis for Personalized Health Insights</h3>
@@ -19,6 +19,7 @@ A web application that allows users to understand their blood test results quick
 - [Demo](#demo)
 - [Technology Stack](#technology-stack)
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [How to use the app locally](#how-to-use-the-app)
 - [Using Docker to run the app](#using-docker-to-run-the-app)
 - [Authors](#authors)
@@ -50,6 +51,12 @@ A web application that allows users to understand their blood test results quick
 - Seamless PDF upload for blood test analysis.
 - Automated biomarker extraction from uploaded PDFs.
 - In-depth analysis, comparison with medical sources, and comprehensive report generation.
+
+
+## Screenshots
+
+![pic222](https://github.com/kleenkanteen/Dr.Dracula/assets/19821445/3157c83e-abcf-45fb-8240-ebb00053982b)
+![pic111](https://github.com/kleenkanteen/Dr.Dracula/assets/19821445/bcbd74d8-7a34-4444-888e-9edae922f2f4)
 
 ## How to use the app locally
 
