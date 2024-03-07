@@ -1,0 +1,17 @@
+Glucose Fasting
+Creatinine
+Sodium
+Potassium
+Alk Phosphatase
+ALT (SGPT)
+Cholesterol
+Triglycerides
+HDL Cholesterol
+LDL Cholesterol
+Chol:HDL Ratio
+NON-HDL Choleste
+Bilirubin Total
+TSH Ultra-sens
+MicroalbuminRDMU
+Urine Creatinine
+MAL/Creat Ratio1
