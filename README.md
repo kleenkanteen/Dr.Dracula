@@ -3,7 +3,7 @@
   <img src="https://lablab.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Flablab-static-eu%2Fimages%2Fevents%2Fclsvwsh8m000x3b6rhvbmf7cf%2Fundefined_imageLink_xbaa800rg.jpg&w=1080&q=75" width="1050" height="400"/>
 </div>
   <h1 align="center">Dr. Dracula</h1>
-
+   <h3 align="center">Simplifying Blood Test Analysis for Personalized Health Insights</h3>
 ## Application Description
 
 A web application that allows users to understand their blood test results quick easy using AI.
@@ -46,9 +46,9 @@ A web application that allows users to understand their blood test results quick
 
 ## Features
 
-- Extremely easy to use
-- Provides accurate information and a source
-- Fast performance
+- Seamless PDF upload for blood test analysis.
+- Automated biomarker extraction from uploaded PDFs.
+- In-depth analysis, comparison with medical sources, and comprehensive report generation.
 
 ## How to use the app locally
 
