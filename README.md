@@ -1,6 +1,6 @@
 <!-- Designed for LEAP24 hackathon 03.2024-->
 <div id="header" align="center">
-  <img src="./frontend/src/assets/img/drdracula-logo.png" width="700" height="400"/>
+  <img src="./frontend/src/assets/img/drdracula-logo.png" width="600" height="400"/>
 </div>
   <h1 align="center">Dr. Dracula</h1>
    <h3 align="center">Simplifying Blood Test Analysis for Personalized Health Insights</h3>
