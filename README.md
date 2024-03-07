@@ -31,7 +31,6 @@ A web application that allows users to understand their blood test results quick
 [View Demo Video](https://dr-dracula.vercel.app/)
 
 
-
 ## Technology Stack
 
 | Technology                                                    | Description                                                          |
