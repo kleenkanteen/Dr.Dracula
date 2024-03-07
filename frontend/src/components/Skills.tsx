@@ -34,7 +34,7 @@ const Skills: FC = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Upload Your Blood Test Results</h2>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        <Carousel responsive={responsive}  className="align-items-center">
                             <div className="align-items-center">
                             <UploadPDF />
                             </div>
