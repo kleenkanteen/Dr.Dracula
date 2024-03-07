@@ -27,7 +27,7 @@ origins = [
     "https://dr-dracula-61s3.vercel.app/",
     "https://dr-dracula-leap-2024.vercel.app/",
     "https://dr-dracula.vercel.app/",
-    "https://27c6-2a01-4ff-f0-380f-00-1.ngrok-free.app/"
+    "https://27c6-2a01-4ff-f0-380f-00-1.ngrok-free.app/",
 ]
 
 app.add_middleware(
