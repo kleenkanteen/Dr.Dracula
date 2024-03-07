@@ -8,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "../components/NavBar";
 import Banner from "../components/Banner";
 import Skills from "../components/Skills";
-import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
@@ -16,7 +15,6 @@ export default function HomePage() {
       <NavBar />
       <Banner />
       <Skills />
-      <Footer />
     </>
   );
 }
