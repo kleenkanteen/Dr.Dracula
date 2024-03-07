@@ -4,6 +4,9 @@ from bs4 import BeautifulSoup
 import ssl
 import urllib.request
 from supabase import create_client, Client
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
@@ -28,14 +31,11 @@ def scrape_section_text(url, id_string):
 
     req = urllib.request.Request(url, headers=hdr)
 
-    # Send a GET request to the URL
     reqOpen = urllib.request.urlopen(req, context=ctx)
 
     html = reqOpen.read()
 
-    # Check if the request was successful (status code 200)
     if reqOpen.getcode() == 200:
-        # Parse the HTML content using BeautifulSoup
         soup = BeautifulSoup(html, 'html.parser')
 
         # Find the element with the matching ID string
@@ -43,7 +43,6 @@ def scrape_section_text(url, id_string):
 
         # Check if the matching element is found
         if matching_element:
-            # Initialize the text content
             text_content = ''
 
             # Process tables separately
@@ -64,10 +63,8 @@ def scrape_section_text(url, id_string):
             # Extract text content from all <p>, <h3>, <li>, <strong> elements within the matching section
             other_content = '\n'.join([element.get_text(strip=True) for element in matching_element.find_all(['p', 'h3', 'li', 'strong'])])
 
-            # Append the other content to the text content
             text_content += other_content
 
-            # Return the extracted text content
             return text_content
         else:
             return f"Element with ID containing '{id_string}' not found on the page."
@@ -81,7 +78,6 @@ def create_test_dict(url):
     """
     req = urllib.request.Request(url, headers=hdr)
 
-    # Send a GET request to the URL
     reqOpen = urllib.request.urlopen(req, context=ctx)
 
     html = reqOpen.read()
@@ -91,13 +87,13 @@ def create_test_dict(url):
     about_result = scrape_section_text(url, "about")
     interpreting_result = scrape_section_text(url, "results")
     result = {
+        "source": f"Source: {url}",
         "name": test_name.text,
         "about": about_result,
         "interpreting_result": interpreting_result,
     }
     return result
 
-# Define a list of URLs
 urls = [
     "https://www.testing.com/tests/creatinine/",
     "https://www.testing.com/tests/sodium/",
@@ -117,12 +113,10 @@ urls = [
 ]
 
 # supabase docs: https://supabase.com/docs/reference/python/insert
-# url: str = os.getenv("SUPABASE_URL")
-# key: str = os.getenv("SUPABASE_KEY")
-# hard code the above 2 variables for now as os.getenv() to load from .env is not working for me
+url: str = os.getenv("SUPABASE_URL")
+key: str = os.getenv("SUPABASE_KEY")
 supabase: Client = create_client(url, key)
 
-# Open the file for writing
 with open("backend/biomarker_reference.txt", "w", encoding='utf-8') as file:
     for url in urls:
         result = create_test_dict(url)
@@ -131,6 +125,6 @@ with open("backend/biomarker_reference.txt", "w", encoding='utf-8') as file:
         for key, value in result.items():
             file.write(f"{value}\n")
         
-        data, count = supabase.table('biomarker_reference').insert({"biomarker": result["name"], "about": result["about"], "interpreting_result": result["interpreting_result"]}).execute()
+        data, count = supabase.table('biomarker_reference').insert({"biomarker": result["name"], "about": result["about"], "interpreting_result": result["interpreting_result"], "source": result["source"]}).execute()
 
         file.write("\n")

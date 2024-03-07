@@ -1,3 +1,4 @@
+Source: https://www.testing.com/tests/creatinine/
 Creatinine Test
 Purpose of the test
 The primary use of a creatinine test is to better understand how well the kidneys are working. A measurement of creatinine can be employed for screening, diagnosis, and/or monitoring of kidney problems.
@@ -45,6 +46,7 @@ Are there any individual factors that might affect the accuracy or meaning of my
 Should I have another kidney function test now or in the future?
 Are there any other follow-up tests that you recommend? Why or why not?
 
+Source: https://www.testing.com/tests/sodium/
 Sodium Test
 Purpose of the test
 A sodium blood test is used to detect an abnormal sodium level, including low sodium (hyponatremia) and high sodium (hypernatremia). It is often used as part of anelectrolyte panelorbasic metabolic panelfor a routine health exam.
@@ -116,6 +118,7 @@ What is the recommended dietary salt intake?
 What can I do to decrease my low or high salt levels risk?
 Should I pay particular attention to rehydrating after playing sports or exercising to keep my sodium levels up?
 
+Source: https://www.testing.com/tests/potassium/
 Potassium Test
 Purpose of the test
 Tests that measure potassium have multiple applications in clinical medicine. Whether potassium is tested alone or as part of a panel, it can be part of diagnosis, monitoring, or screening evaluation.
@@ -164,6 +167,7 @@ Are there any follow-up tests that you recommend?
 Should I have another potassium test?
 Should I make any changes to my diet?
 
+Source: https://www.testing.com/tests/alkaline-phosphatase-alp/
 Alkaline Phosphatase (ALP) Test
 Purpose of the test
 The purpose of testing ALP is to determine if you have normal levels of this enzyme. An ALP blood test can be used for screening, diagnosis, and monitoring of liver or bone diseases and other health conditions.
@@ -202,6 +206,7 @@ What did the test show about my ALP levels?
 Were any other measurements taken in addition to ALP? What can you learn from those measurements?
 Do you recommend any other tests? What are the pros and cons of different follow-up tests?
 
+Source: https://www.testing.com/tests/alanine-aminotransferase-alt/
 Alanine Aminotransferase (ALT)
 Purpose of the test
 The purpose of an ALT test is to help assess the health of the liver. Damage to cells in the liver can cause ALT to leak into the blood, so a test can help detect liver problems.
@@ -253,6 +258,7 @@ Were any other measurements taken? If so, were they normal or abnormal?
 What do the test results mean for my overall health?
 Do you recommend any follow-up tests? If so, which ones, and what are their benefits and risks?
 
+Source: https://www.testing.com/tests/cholesterol/
 Cholesterol Test
 
 
@@ -313,6 +319,7 @@ How do I know the medication is working?
 What happens if this treatment plan doesn’t improve my cholesterol—what’s next?
 While the main focus of cholesterol testing is on identifying cases of high cholesterol, it is also possible to have very low levels. This is most often tied to an underlying health condition or malnutrition.
 
+Source: https://www.testing.com/tests/triglycerides/
 Triglycerides Testing
 Purpose of the test
 Blood tests for triglycerides are usually part of alipid panelthat is used to help identify your risk of developing heart disease and to help make decisions about what treatment may be needed if there is borderline or high risk.
@@ -381,6 +388,7 @@ Are there any diagnoses to be made based on my results?
 Will any follow up tests be needed based on my results?
 Given results, is there anything that you would suggest I do to improve my health?
 
+Source: https://www.testing.com/tests/hdl-cholesterol/
 HDL Cholesterol Testing
 
 
@@ -459,6 +467,7 @@ Should I have another cholesterol test? If so, when?
 Are there any other tests that you recommend to evaluate my cardiovascular health?
 Do you recommend any lifestyle changes or treatments to reduce my risk of cardiovascular disease?
 
+Source: https://www.testing.com/tests/ldl-cholesterol/
 LDL Cholesterol Blood Test (LDL-C)
 
 
@@ -535,6 +544,7 @@ How can I lower my LDL cholesterol level?
 Will I need a prescription to lower my cholesterol?
 How often will we check my cholesterol levels?
 
+Source: https://www.testing.com/tests/non-high-density-lipoprotein-cholesterol/
 Non-High Density Lipoprotein Cholesterol Testing
 
 
@@ -612,6 +622,7 @@ What other factors do you consider when determining my cardiovascular disease ri
 Do you recommend any follow-up testing?
 Based on my non-HDL cholesterol levels, should I make any lifestyle changes or begin any treatment to improve my cardiovascular health?
 
+Source: https://www.testing.com/tests/bilirubin/
 Bilirubin Test
 Purpose of the test
 Doctors often order a bilirubin test along with other tests performed on a single blood or urine sample, such as in acomprehensive metabolic panel, aliver panel, or aurinalysis.
@@ -647,6 +658,7 @@ Were any other measurements taken? What were the results?
 What do these tests tell us about my overall health?
 Do I need any follow-up tests?
 
+Source: https://www.testing.com/tests/ldl-cholesterol/
 LDL Cholesterol Blood Test (LDL-C)
 
 
@@ -723,6 +735,7 @@ How can I lower my LDL cholesterol level?
 Will I need a prescription to lower my cholesterol?
 How often will we check my cholesterol levels?
 
+Source: https://www.testing.com/tests/at-home-cholesterol-test/
 At-Home Cholesterol Testing
 Purpose of the test
 Cholesterol testing can be a component of assessing cardiovascular disease risk. It is frequently prescribed by doctors, but it’s role as an at-home test is not clearly defined.
@@ -793,6 +806,7 @@ Whether conducted in a laboratory or at home, cholesterol tests rely on a blood 
 A principal difference between these tests is how the blood sample is obtained. Blood drawn from a vein is usually analyzed in tests that are conducted at a doctor’s office, lab, or hospital. At-home self-tests and self-collection tests rely on a smaller amount of blood obtained with a fingerstick.
 Another difference is insurance coverage. When a standard blood draw and cholesterol test is ordered by a doctor, some or all of the charges are often covered by insurance. In contrast, most at-home cholesterol tests are not covered, requiring you to pay the full cost out-of-pocket.
 
+Source: https://www.testing.com/tests/hdl-cholesterol/
 HDL Cholesterol Testing
 
 
@@ -871,6 +885,7 @@ Should I have another cholesterol test? If so, when?
 Are there any other tests that you recommend to evaluate my cardiovascular health?
 Do you recommend any lifestyle changes or treatments to reduce my risk of cardiovascular disease?
 
+Source: https://www.testing.com/tests/direct-ldl-cholesterol/
 Direct LDL Cholesterol
 Purpose of the test
 The purpose of a direct LDL cholesterol test is to determine the amount of “bad” LDL cholesterol in the blood. Assessing LDL cholesterol levels can be involved in health screening, monitoring, and diagnosis.
