@@ -52,9 +52,14 @@ export function UploadPDF() {
       const fetchOptions = {
         method: "POST",
         body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Request-Headers": "*",
+          "Access-Control-Request-Method": "*"
+        },
       };
       
-      setBloodReport("Analyzing data...");
+      setBloodReport("Analyzing data....");
       
       let result = await fetch(url, fetchOptions);
       console.log("uploaded file:", data.file[0].name);
