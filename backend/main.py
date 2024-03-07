@@ -1,11 +1,16 @@
 import os
-from typing import Union, Annotated
-from fastapi.middleware.cors import CORSMiddleware
-
-from fastapi import FastAPI
-from fastapi import FastAPI, File, Form, UploadFile
+from typing import Annotated
 import re
+
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI
+from fastapi import FastAPI, File
+
 import fitz
+from openai import OpenAI
+from supabase import create_client, Client
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI()
 
@@ -88,6 +93,10 @@ def extract_biomarker_values(test_file_path: str):
         x.close() # close the test's txt file as it's not needed anymore
     return clean_blood_test
 
+url: str = os.getenv("SUPABASE_URL")
+key: str = os.getenv("SUPABASE_KEY")
+supabase: Client = create_client(url, key)
+
 @app.post("/blood-test")
 async def upload_pdf(
     file: Annotated[bytes, File()],
@@ -102,6 +111,35 @@ async def upload_pdf(
     with open("temp/biomarker_values.txt", "w") as f:
         for item in biomarker_values:
             f.write(f"{item}\n")
+    
+    analysis = {}
+    client = OpenAI()
+    for biomarker in biomarker_values:
+        medical_reference = supabase.table("biomarker_reference").select("*").eq("biomarker", biomarker['biomarker']).execute()
+
+        query = f"""
+        Context information is below.
+        ---------------------
+        Biomarker: {medical_reference.data[0]['biomarker']}
+        About the test: {medical_reference.data[0]['about']}
+        Interpretation: {medical_reference.data[0]['interpreting_result']}
+        Source: {medical_reference.data[0]['source']}
+        ---------------------
+        Given the context information and not prior knowledge, answer the query.
+        Query: Here is a biomarker:{biomarker['biomarker']}. The test result is {biomarker['value']} {biomarker['measuring_unit']}. The normal range is {biomarker['normal_range']}.
+        Answer: 
+        """
+
+        chat_completion = client.chat.completions.create(
+            messages=[
+                {"role": "system", "content": "You are a medical doctor who is adept at reading blood tests and giving concise explanations."},
+                {"role": "user", "content": f"Here is a biomarker:{biomarker['biomarker']}. The test result is {biomarker['value']} {biomarker['measuring_unit']}. The normal range is {biomarker['normal_range']}. Using the following information, explain what the test is about and if the. "},
+            ],
+            model="gpt-3.5-turbo",
+        )
+
+
+
     
     return {
         "file_size": len(file),

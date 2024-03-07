@@ -3,3 +3,4 @@ fastapi==0.109.0
 python-multipart
 supabase
 python-dotenv
+openai
