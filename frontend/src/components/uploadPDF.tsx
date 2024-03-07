@@ -59,7 +59,7 @@ export function UploadPDF() {
         },
       };
       
-      setBloodReport("Analyzing data...");
+      setBloodReport("Analyzing data....");
       
       let result = await fetch(url, fetchOptions);
       console.log("uploaded file:", data.file[0].name);
