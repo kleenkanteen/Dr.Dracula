@@ -4,11 +4,7 @@
 </div>
   <h1 align="center">Dr. Dracula</h1>
    <h3 align="center">Simplifying Blood Test Analysis for Personalized Health Insights</h3>
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> 61a65ddd59d89199bfcd3898b2f9f6f58c98f1d8
 ## Application Description
 
 A web application that allows users to understand their blood test results quick easy using AI.
@@ -32,11 +28,7 @@ A web application that allows users to understand their blood test results quick
  
 ## Demo
 
-<<<<<<< HEAD
-[View Demo Video]([https://link.com](https://dr-dracula.vercel.app/))
-=======
 [View Demo Video](https://dr-dracula.vercel.app/)
->>>>>>> 61a65ddd59d89199bfcd3898b2f9f6f58c98f1d8
 
 
 ## Technology Stack
