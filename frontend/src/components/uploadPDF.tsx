@@ -52,6 +52,11 @@ export function UploadPDF() {
       const fetchOptions = {
         method: "POST",
         body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Request-Headers": "*",
+          "Access-Control-Request-Method": "*"
+        },
       };
       
       setBloodReport("Analyzing data...");
