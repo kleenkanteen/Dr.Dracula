@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import meter1 from "../assets/img/meter1.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png";
