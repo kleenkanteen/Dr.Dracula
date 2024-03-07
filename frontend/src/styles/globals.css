@@ -79,3 +79,7 @@
   margin: auto;
   margin-top: 24px;
 }
+
+.results-card {
+  width: 50%;
+}
