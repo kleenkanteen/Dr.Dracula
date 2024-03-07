@@ -25,7 +25,8 @@ origins = [
     "https://localhost",
     "https://localhost:80",
     "https://dr-dracula-61s3.vercel.app/",
-    "https://dr-dracula-leap-2024.vercel.app/"
+    "https://dr-dracula-leap-2024.vercel.app/",
+    "https://dr-dracula.vercel.app/"
 ]
 
 app.add_middleware(
