@@ -44,7 +44,8 @@ export function UploadPDF() {
 
   const onSubmit = async (data: any) => {
     try {
-      const url = new URL("http://localhost:8000/blood-test");
+      const apiURL = process.env.REACT_APP_GD_API_URL ? process.env.REACT_APP_GD_API_URL : "http://localhost:8000/blood-test";
+      const url = new URL(apiURL);
       const formData = new FormData();
       formData.append("upload_file", data.file[0]);
 
@@ -54,7 +55,7 @@ export function UploadPDF() {
       };
       
       setBloodReport("Analyzing data...");
-
+      
       let result = await fetch(url, fetchOptions);
       console.log("uploaded file:", data.file[0].name);
 
@@ -68,7 +69,7 @@ export function UploadPDF() {
 
       setBloodReport(md_res);
     } catch(error){
-      console.log("failed to upload file: " + error);
+      console.error("failed to upload file: " + error);
     }
   };
 
