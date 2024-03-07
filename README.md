@@ -2,7 +2,8 @@
 <div id="header" align="center">
   <img src="https://lablab.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Flablab-static-eu%2Fimages%2Fevents%2Fclsvwsh8m000x3b6rhvbmf7cf%2Fundefined_imageLink_xbaa800rg.jpg&w=1080&q=75" width="1050" height="400"/>
 </div>
-  <h1 align="center">APP NAME</h1>
+  <h1 align="center">Dr. Dracula</h1>
+   <h3 align="center">Simplifying Blood Test Analysis for Personalized Health Insights</h3>
 
 ## Application Description
 
@@ -11,12 +12,11 @@ APP DESCRIPTION
 ## Table of Contents
 
 <details>
-<summary>APP NAME</summary>
+<summary>Dr. Dracula</summary>
 
 - [Application Description](#application-description)
 - [Table of Contents](#table-of-contents)
 - [Demo](#demo)
-- [Prototype](#prototype)
 - [Screenshots](#screenshots)
 - [Technology Stack](#technology-stack)
 - [Features](#features)
@@ -31,10 +31,6 @@ APP DESCRIPTION
 
 [View Demo Video](https://link.com)
 
-## Prototype
-
-[View Prototype](https://link.com)
-
 ## Screenshots
 
 
@@ -42,15 +38,22 @@ APP DESCRIPTION
 
 | Technology                                                    | Description                                                          |
 | ------------------------------------------------------------- | -------------------------------------------------------------------- |
-| TypeScript                                                      | TypeScript is a free and open source programming language developed and maintained by Microsoft. |
-
+| Python                                                      | a high-level, general-purpose programming language  |
+| FastAPI                                                      | a modern web framework for building RESTful APIs in Python |
+| Next.js                                                      | an open-source web development framework  |
+| JavaScript                                                      | a programming language and core technology of the World Wide Web |
+| shadcdn                                                      | a CLI for adding components to projects |
+| OpenAI Python library                                                      | provides convenient access to the OpenAI REST API from any Python 3.7+ application |
+| Fitz (PyMuPDF)                                                      | a high-performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents |
+| BeautifulSoup4                                                      | a library that makes it easy to scrape information from web pages |
+| stack name                                                      | stack descr. |
 
 
 ## Features
 
-- FEATURE 1
-- FEATURE 1
-- FEATURE 1
+- Seamless PDF upload for blood test analysis.
+- Automated biomarker extraction from uploaded PDFs.
+- In-depth analysis, comparison with medical sources, and comprehensive report generation.
 
 ## How to use the app locally
 
