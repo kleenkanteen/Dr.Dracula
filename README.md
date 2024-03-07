@@ -2,22 +2,21 @@
 <div id="header" align="center">
   <img src="https://lablab.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Flablab-static-eu%2Fimages%2Fevents%2Fclsvwsh8m000x3b6rhvbmf7cf%2Fundefined_imageLink_xbaa800rg.jpg&w=1080&q=75" width="1050" height="400"/>
 </div>
-  <h1 align="center">APP NAME</h1>
+  <h1 align="center">Dr. Dracula</h1>
+   <h3 align="center">Simplifying Blood Test Analysis for Personalized Health Insights</h3>
 
 ## Application Description
 
-APP DESCRIPTION
+A web application that allows users to understand their blood test results quick easy using AI.
 
 ## Table of Contents
 
 <details>
-<summary>APP NAME</summary>
+<summary>Dr. Dracula</summary>
 
 - [Application Description](#application-description)
 - [Table of Contents](#table-of-contents)
 - [Demo](#demo)
-- [Prototype](#prototype)
-- [Screenshots](#screenshots)
 - [Technology Stack](#technology-stack)
 - [Features](#features)
 - [How to use the app locally](#how-to-use-the-app)
@@ -29,28 +28,28 @@ APP DESCRIPTION
  
 ## Demo
 
-[View Demo Video](https://link.com)
-
-## Prototype
-
-[View Prototype](https://link.com)
-
-## Screenshots
+[View Demo Video](https://dr-dracula.vercel.app/)
 
 
 ## Technology Stack
 
 | Technology                                                    | Description                                                          |
 | ------------------------------------------------------------- | -------------------------------------------------------------------- |
-| TypeScript                                                      | TypeScript is a free and open source programming language developed and maintained by Microsoft. |
-
+| TypeScript                                                    | TypeScript is a free and open source programming language developed and maintained by Microsoft.
+| FastAPI                                                       | a modern, fast (high-performance), web framework for building APIs with Python.
+| Next.js                                                       | Next.js is a popular open-source React framework for building web applications.
+| ShadCn                                                        | Beautifully designed components that you can copy and paste into your apps.
+| OpenAI Python Library                                         | A library that allows developers to interact with OpenAI's powerful models.
+| JavaScript                                                    | A versatile and widely used programming language, primarily known for its role in web development.
+| PyMuPDF                                                       | A library used for dealing with PDF files in Python.
+| Beautiful Soup 4                                              | A library used for web scraping in Python.
 
 
 ## Features
 
-- FEATURE 1
-- FEATURE 1
-- FEATURE 1
+- Seamless PDF upload for blood test analysis.
+- Automated biomarker extraction from uploaded PDFs.
+- In-depth analysis, comparison with medical sources, and comprehensive report generation.
 
 ## How to use the app locally
 
