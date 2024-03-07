@@ -1,9 +1,9 @@
+"use client"
+
 import React, { FC } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png";
-
-"use client"
 
 import { UploadPDF } from "../components/uploadPDF";
 
@@ -35,7 +35,7 @@ const Skills: FC = () => {
                     <div className="skill-bx wow zoomIn">
                         <h2>Upload Your Blood Test Results</h2>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
+                            <div className="align-items-center">
                             <UploadPDF />
                             </div>
                         </Carousel>

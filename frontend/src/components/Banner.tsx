@@ -1,7 +1,6 @@
 import React, { useState, useEffect, FC } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -11,7 +10,7 @@ const Banner: FC = () => {
   const [text, setText] = useState<string>('');
   const [delta, setDelta] = useState<number>(300 - Math.random() * 100);
   const [index, setIndex] = useState<number>(1);
-  const toRotate: string[] = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate: string[] = [ "for Personalized", "Health Insights." ];
   const period: number = 2000;
 
   useEffect(() => {
@@ -55,9 +54,8 @@ const Banner: FC = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h1>{`Hi! I'm Dr. Dracula`} <span className="txt-rotate" data-period="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Simplifying Blood Test Analysis for Personalized Health Insights.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <h1>Hi! I'm Dr. Dracula</h1>
+                <p>{`Simplifying Blood Test Analysis`} <span className="txt-rotate" data-period="1000" data-rotate='[ "for Personalized", "Health Insights." ]'><span className="wrap">{text}</span></span></p>
               </div>}
             </TrackVisibility>
           </Col>
