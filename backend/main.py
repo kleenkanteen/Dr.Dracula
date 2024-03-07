@@ -22,7 +22,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    "https://dr-dracula-61s3.vercel.app/"
+    "https://dr-dracula-61s3.vercel.app/",
+    "https://dr-dracula-leap-2024.vercel.app/"
 ]
 
 app.add_middleware(
