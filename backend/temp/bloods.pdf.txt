@@ -1,0 +1,183 @@
+Performed By:   MED-HEALTH LABORATORIES LTD.
+www.mhlab.ca | support@mhlab.ca
+PRINTED DATE: 20 APR 2023
+18:10
+1216 Lawrence Ave. West, Toronto ON M6A 1E2               PH:(416) 256-7278 FAX:(416) 256-7697
+PATIENT:
+SPECIMEN ACC#:
+PHYSICIAN:
+( 5
+SAROWAR,
+2304180772
+- MD
+FAX:
+CHART#:
+SERVICE DATE:
+REPORT DATE:
+18 APR 2023
+19 APR 2023
+12:41
+AGE: 22
+COLLECTION DATE:
+STATUS:
+|
+SEX: MALE
+18 APR 2023
+14:45
+FINAL
+TEST
+NORMAL
+ABNORMAL
+UNITS
+REFERENCE RANGE
+ GENERAL CHEMISTRY 
+Glucose Fasting
+4.1 L
+mmol/L
+4.3-6.4
+HbA1C
+4.9
+%
+<6.0
+Screening: Normal glycemic control
+Goal for monitoring Non-Diabetics refer to OAML communique dated May 2015, Available on request
+Creatinine
+87
+umol/L
+50-115
+eGFR
+108
+>=90
+Normal eGFR is described as greater than or equal to 90 ml/min/1.73m^2
+For patients of African descent, the reported eGFR must be multiplied by 1.15
+Effective July 21, 2015, eGFR is calculated using the CKD-EPI 2009 equation
+KDIGO 2012 guidelines highlighted the importance of eGFR and urine albumin creatinine ratio(ACR)in
+screening, diagnosis and management of CKD. Result for eGFR should be interpreted in concert with ACR
+Sodium
+137
+mmol/L
+136-144
+Potassium
+4.7
+mmol/L
+3.6-5.1
+Alk Phosphatase
+33 L
+U/L
+38-126
+Alkaline Phosphatase testing should be reserved for specific diagnosis, especially hepatobiliary and bone
+disorders. Its use in routine health screening is not appropriate.
+ALT (SGPT)
+11 L
+U/L
+17-63
+Cholesterol
+5.43 H
+mmol/L
+<5.20
+Triglycerides
+0.54
+mmol/L
+<1.50
+HDL Cholesterol
+1.62 H
+mmol/L
+1.03-1.54
+LDL Cholesterol
+3.56 H
+mmol/L
+<3.36
+Chol:HDL Ratio
+3.3
+NON-HDL Choleste
+3.81
+mmol/L
+Non-HDL cholesterol is calculated from total cholesterol and HDL-C and is not significanlty affected by the
+fasting status of the patient
+overnight fasting and early morning testing no longer needed for many lipid screening tests
+________________________________________________________________________
+LIPID TARGET VALUES
+10 years CVD risk         Primary Tx Target        Alrenate Tx Target
+________________________________________________________________________
+High or intermediate     LDL <= 2.0 mmol/L or  Non-HDL-C <= 2.6 mmol/L
+   (FRS>=10%)               >=50% decrease in LDL-C
+Low(FRS<10%)                >=50% decrease in LDL-C
+Chol/HDL-C is not included in the 2012 CCS guidelines as a lipid initiation or treatment target but is
+recognized as an indicator of high CVD risk at Chol/HDL-C ratio>6.0
+NOTE TO PATIENTS: Please contact your Health Care Provider for interpretation of this report
+NOTE: This laboratory report contains confidential information intended for view by authorized person(s) only and should be
+ disposed of securely (e.g. shredding) before discarding.
+ If gender is not provided this report cannot specify a range or flag abnormal results.
+Page 1 of 2
+)
+OHIP#
+DATE OF BIRTH:
+SABIH
+Performed By:   MED-HEALTH LABORATORIES LTD.
+www.mhlab.ca | support@mhlab.ca
+PRINTED DATE: 20 APR 2023
+18:10
+1216 Lawrence Ave. West, Toronto ON M6A 1E2               PH:(416) 256-7278 FAX:(416) 256-7697
+PATIENT:
+OHIP#
+SPECIMEN ACC#:
+PHYSICIAN:
+( 5
+2304180772
+- MD
+05) 848-1779
+CHART#:
+DATE OF BIRTH:
+SERVICE DATE:
+REPORT DATE:
+19 APR 2023
+12:41
+AGE: 22
+COLLECTION DATE:
+STATUS:
+|
+SEX: MALE
+18 APR 2023
+FINAL
+TEST
+NORMAL
+ABNORMAL
+UNITS
+REFERENCE RANGE
+Fasting
+>10
+Hours
+Consider the non-HDL-C value as an alternate lipid target if monitoring treatment is intermediate or high
+risk patients.
+Bilirubin Total
+7
+umol/L
+5-21
+TSH Ultra-sens
+1.21
+mIU/L
+0.35-4.94
+Asymptomatic patients should generally not be screened for thyroid disease (exceptions include pregnant,
+post-partum, or post-menopausal women).  Thyroid function in patients with suspected thyroid disease is
+best assessed with TSH as the sole screening test.  It is not appropriate to order free-T4 and/or free-T3 in
+addition to TSH in the initial screen.
+MicroalbuminRDMU
+3.2
+mg/L
+Urine Creatinine
+11.58
+mmol/L
+MAL/Creat Ratio1
+0.3
+NORMAL MICROALBUMIN/CREATIN RATIO: <2.0 mg Albumin / mmol creatinine
+NOTE TO PATIENTS: Please contact your Health Care Provider for interpretation of this report
+NOTE: This laboratory report contains confidential information intended for view by authorized person(s) only and should be
+ disposed of securely (e.g. shredding) before discarding.
+ If gender is not provided this report cannot specify a range or flag abnormal results.
+Page 2 of 2
+)
+14:45
+18 APR 2023
+SAROWAR,
+SABIH
+

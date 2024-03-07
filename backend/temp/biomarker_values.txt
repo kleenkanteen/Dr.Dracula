@@ -1,0 +1,17 @@
+{'biomarker': 'Glucose Fasting', 'value': 4.1, 'measuring_unit': 'mmol/L', 'normal_range': '4.3-6.4'}
+{'biomarker': 'Creatinine', 'value': 87.0, 'measuring_unit': 'umol/L', 'normal_range': '50-115'}
+{'biomarker': 'Sodium', 'value': 137.0, 'measuring_unit': 'mmol/L', 'normal_range': '136-144'}
+{'biomarker': 'Potassium', 'value': 4.7, 'measuring_unit': 'mmol/L', 'normal_range': '3.6-5.1'}
+{'biomarker': 'Alk Phosphatase', 'value': 33.0, 'measuring_unit': 'U/L', 'normal_range': '38-126'}
+{'biomarker': 'ALT (SGPT)', 'value': 11.0, 'measuring_unit': 'U/L', 'normal_range': '17-63'}
+{'biomarker': 'Cholesterol', 'value': 5.43, 'measuring_unit': 'mmol/L', 'normal_range': '<5.20'}
+{'biomarker': 'Triglycerides', 'value': 0.54, 'measuring_unit': 'mmol/L', 'normal_range': '<1.50'}
+{'biomarker': 'HDL Cholesterol', 'value': 1.62, 'measuring_unit': 'mmol/L', 'normal_range': '1.03-1.54'}
+{'biomarker': 'LDL Cholesterol', 'value': 3.56, 'measuring_unit': 'mmol/L', 'normal_range': '<3.36'}
+{'biomarker': 'Chol:HDL Ratio', 'value': 3.3, 'measuring_unit': '%', 'normal_range': 'Unknown'}
+{'biomarker': 'NON-HDL Choleste', 'value': 3.81, 'measuring_unit': 'mmol/L', 'normal_range': 'Unknown'}
+{'biomarker': 'Bilirubin Total', 'value': 7.0, 'measuring_unit': 'umol/L', 'normal_range': '5-21'}
+{'biomarker': 'TSH Ultra-sens', 'value': 1.21, 'measuring_unit': 'mIU/L', 'normal_range': '0.35-4.94'}
+{'biomarker': 'MicroalbuminRDMU', 'value': 3.2, 'measuring_unit': 'mg/L', 'normal_range': 'Unknown'}
+{'biomarker': 'Urine Creatinine', 'value': 11.58, 'measuring_unit': 'mmol/L', 'normal_range': 'Unknown'}
+{'biomarker': 'MAL/Creat Ratio1', 'value': 0.3, 'measuring_unit': '%', 'normal_range': 'Unknown'}

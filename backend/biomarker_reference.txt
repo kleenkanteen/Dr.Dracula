@@ -1,0 +1,195 @@
+Source: https://www.testing.com/tests/creatinine/
+Creatinine Test
+Purpose: Assess kidney function
+Measurement: Creatinine levels in blood or urine
+Normal Ranges:
+Blood: 0.7-1.3 mg/dL (male), 0.5-1.1 mg/dL (female)
+Urine: 15-25 mg/kg body weight/day
+Interpretation:
+Elevated levels may indicate impaired kidney function, dehydration, or muscle problems
+Lower than expected levels may indicate malnutrition or muscle loss
+Results should be interpreted by a doctor in context of other factors
+
+Source: https://www.testing.com/tests/sodium/
+Sodium Test
+Purpose: Assess electrolyte balance and diagnose dehydration or other conditions
+Measurement: Sodium levels in blood and/or urine
+Normal Ranges: Adult: 136-145 mEq/L
+Interpretation:
+Low levels (hyponatremia) may indicate dehydration, excessive fluid loss, or hormonal imbalances
+High levels (hypernatremia) may indicate dehydration, certain medical conditions, or excessive salt intake
+Results should be interpreted by a doctor in context of other factors and symptoms
+
+Source: https://www.testing.com/tests/potassium/
+Potassium Test
+Potassium is an essential nutrient found throughout the body and is necessary for healthy cell activity.
+A potassium test measures the amount of potassium in a blood or urine sample.
+Potassium tests are used for diagnosis, monitoring, and screening of various health conditions.
+High potassium levels (hyperkalemia) can be caused by dehydration, certain medications, or kidney problems.
+Low potassium levels (hypokalemia) can be caused by diarrhea, vomiting, or diuretic medications.
+
+Source: https://www.testing.com/tests/alkaline-phosphatase-alp/
+Alkaline Phosphatase (ALP) Test
+Alkaline phosphatase (ALP) is an enzyme found in the liver, bones, and other tissues.
+An ALP test measures the level of ALP in the blood.
+ALP tests are used for diagnosis, monitoring, and screening of liver and bone diseases.
+High ALP levels can be caused by liver damage, bone problems, or other conditions.
+Low ALP levels are less common but can occur due to malnutrition, nutrient deficiencies, or certain medical conditions.
+
+Source: https://www.testing.com/tests/alanine-aminotransferase-alt/
+ALT Test
+Purpose: Assess liver health by measuring ALT enzyme levels.
+Measurement: ALT levels in blood, part of liver panel.
+Diagnosis: Identifies liver issues post-symptoms.
+Screening: Early detection, especially with risk factors.
+Monitoring: Tracks liver disease progression, medication effects.
+Test Result Interpretation: High ALT may signal liver problems; context, consultation crucial.
+Follow-up: Recommended after abnormal results or liver disease diagnosis.
+
+Source: https://www.testing.com/tests/cholesterol/
+Cholesterol Test
+Purpose: Assess cardiac risk via total cholesterol levels.
+Measurement: Total cholesterol in blood, part of lipid panel.
+Screening: Detects cardiovascular risks, frequency varies.
+Diagnosis/Monitoring: Identifies conditions, monitors treatment.
+Test Result Interpretation: Total cholesterol ranges (normal, borderline, high), lipid panel for detail.
+Follow-up: Results available in days, follow-up for lifestyle changes, medications.
+
+Source: https://www.testing.com/tests/triglycerides/
+Triglycerides Test
+Purpose: Part of lipid panel to assess heart disease risk.
+Measurement: Triglyceride levels in blood.
+Diagnosis/Monitoring: Helps identify and treat high lipid levels.
+Test Result Interpretation: Categorized based on risk levels.
+When to Test:
+Adults: Every 4-6 years for heart disease risk evaluation.
+Children: Once between 9-11, again between 17-21.
+More frequent testing with identified risk factors.
+Monitoring: Regular intervals for assessing lifestyle changes or drug therapy effectiveness.
+Receiving Results: Available in hours to days, sent directly or through online health portal.
+Interpreting Results: Levels impact heart health; consultation with a healthcare professional essential.
+Follow-up: Depends on results, potential lifestyle changes, or treatments.
+
+Source: https://www.testing.com/tests/hdl-cholesterol/
+HDL Cholesterol Test
+Purpose: Assess cardiovascular health and heart disease risk.
+Measurement: HDL cholesterol levels in blood.
+Screening: Periodic checks, especially with risk factors.
+Monitoring: Regular intervals, especially after abnormal results or cardiovascular issues.
+Diagnosis: Less common, mainly for identifying health problems post-symptoms.
+Test Result Interpretation: HDL levels categorized, higher considered better.
+When to Test:
+Screening: Varies, often every 4-6 years for adults.
+Monitoring: After abnormal results, cardiovascular problems, or ongoing treatment.
+Receiving Results: Within days, sent electronically or by mail.
+Interpreting Results: HDL levels impact heart health; consultation with a healthcare professional is crucial.
+Follow-up: Depends on results, potential lifestyle changes, or treatments.
+
+Source: https://www.testing.com/tests/ldl-cholesterol/
+LDL Cholesterol Test
+Purpose:
+Measures LDL cholesterol for cardiovascular health—diagnosis, screening, and monitoring.
+Demographics & Frequency:
+Children: Once at 9-11, again at 17-21 (no risk factors).
+Adolescents/adults: At least every 5 years (risk factors).
+Males 20-45, Females 20-55: Every 4-6 years (no risk factors).
+Males 45-65, Females 55-65: Every 1-2 years (no risk factors).
+People over 65: Annually (with/without risk factors).
+Test Measures:
+LDL cholesterol in mg/dL. Includes HDL, triglycerides, and VLDL.
+Testing Types:
+Calculated: Uses total cholesterol, HDL, triglycerides.
+Direct: Measures LDL directly, used with high triglycerides.
+Results & Monitoring:
+Interpretation: Categorized based on levels.
+Monitoring: Regular intervals, repeat testing if needed.
+
+Source: https://www.testing.com/tests/non-high-density-lipoprotein-cholesterol/
+Non-HDL Cholesterol Test
+Purpose:
+Measures "bad" cholesterol for cardiovascular health—diagnosis, screening, monitoring.
+Demographics & Frequency:
+Children: Once at 9-11, again at 17-21 (no risk factors).
+Adolescents/adults: At least every 5 years (risk factors).
+Males 20-45, Females 20-55: Every 4-6 years (no risk factors).
+Males 45-65, Females 55-65: Every 1-2 years (no risk factors).
+People over 65: Annually (with/without risk factors).
+Test Measures:
+Non-HDL cholesterol calculated by subtracting HDL from total cholesterol.
+Results & Monitoring:
+Interpretation: Listed in mg/dL. Elevated levels indicate increased cardiovascular risk.
+Factors Affecting: Active illness, variability among individuals/labs, some blood disorders.
+
+Source: https://www.testing.com/tests/bilirubin/
+Bilirubin Test
+Purpose: Measures bilirubin levels in blood and urine for diagnosing conditions like jaundice, hepatitis, cirrhosis, gallbladder disease, and hemolytic anemia. Also used for newborn jaundice.
+Test Measures: Bilirubin in mg/dL, including unconjugated (indirect) and conjugated (direct) forms.
+Analyzing Results: Reference ranges (mg/dL) - Total bilirubin: 0.3–1.0; Direct bilirubin: 0.1–0.3; Indirect bilirubin: 0.2–0.7. Elevated levels may indicate disease. Neonatal bilirubin monitored in newborns.
+Urinary Bilirubin Test: Detects conjugated bilirubin in urine, indicating liver issues. Positive results (bilirubinuria) may lead to tea or cola-colored urine.
+Follow-up: Doctor's interpretation vital; factors like age, gender, health history considered. Discussion about abnormal levels, additional tests, and potential treatment.
+Questions Post-Test: Results interpretation, other measurements, overall health insights, need for follow-up tests, understanding individualized reference ranges.
+
+Source: https://www.testing.com/tests/at-home-cholesterol-test/
+At-Home Cholesterol Testing
+Purpose: Assess cardiovascular disease risk. Limited role defined; often doctor-prescribed for screening and monitoring heart health.
+Test Measures: Total cholesterol, HDL, LDL, and triglycerides. Results in mg/dL. Targets vary.
+Accuracy: Comparable to lab tests if properly performed. Influenced by individual factors, active illness, and LDL-C calculations. Documentation from providers important.
+Follow-up: Abnormal results may require lab assessment, detailed cholesterol tests, or further cardiovascular assessments. Doctor consultation for interpretation and tailored recommendations.
+Questions Post-Test: Target levels, abnormal results, comparison with prior tests, further testing recommendations, treatment/lifestyle change considerations. Importance of discussing results with a doctor emphasized.
+
+Source: https://www.testing.com/tests/ldl-cholesterol/
+Lab LDL Cholesterol Test
+Purpose: Diagnose, screen, and monitor cardiovascular health by measuring LDL cholesterol levels in blood.
+Frequency: Varies by age, gender, and risk factors. Ranges from every 4-6 years to annually.
+Test Measures: LDL cholesterol in mg/dL. Calculated or direct testing. Associated with heart disease risk.
+Interpretation: Levels categorized (Optimal, Near Optimal, Borderline High, High, Very High). Contextual interpretation considering age, family history, lifestyle, and other factors crucial.
+Follow-up: Regular monitoring, lifestyle changes, or medication based on levels. Doctor's guidance essential.
+Questions Post-Test: LDL levels, risk category, ideal level, lowering methods, need for prescription, and test frequency. Regular communication with a healthcare provider advised.
+
+Source: https://www.testing.com/tests/hdl-cholesterol/
+HDL Cholesterol Testing
+Purpose of the Test:
+Assess cardiovascular health and risk for heart disease.
+Evaluate the ratio of HDL-C to non-HDL cholesterol.
+Screen, monitor, and diagnose problems affecting heart, blood vessels, and circulation.
+Screening Frequency:
+Children:
+No risk factors: Once between ages 9-11; again between 17-21.
+One or more risk factors: Every 1-3 years starting when risk factor identified.
+Adolescents and Adults (Any Age):
+One or more risk factors: At least every 5 years; more frequently based on specific risk factors.
+Males (20-45), Females (20-55) - No risk factors: Every 4-6 years.
+Males (45-65), Females (55-65) - No risk factors: Every 1-2 years.
+People Over 65: Annually.
+Test Measurement:
+Analyzes blood sample for cholesterol within HDL particles.
+Assesses cardiovascular risk through total cholesterol, HDL-C, and LDL cholesterol.
+When to Get Tested:
+Depends on individual circumstances, risk factors, and health history.
+Screening intervals adjusted based on age, risk factors, and health conditions.
+Interpreting Test Results:
+HDL-C level measured in mg/dL.
+Higher levels (above 60 mg/dL) associated with reduced cardiovascular risk.
+Low levels (under 40 mg/dL) considered a risk factor for cardiovascular problems.
+Interpretation considers age, sex, health history, and overall lipid profile.
+Follow-Up:
+Follow-up tests recommended based on results and risk factors.
+Discussion with a doctor essential for detailed interpretation and potential follow-up actions.
+
+
+Source: https://www.testing.com/tests/direct-ldl-cholesterol/
+Direct LDL Cholesterol Testing
+Purpose of the Test:
+Determine the amount of "bad" LDL cholesterol in the blood.
+Involved in health screening, monitoring, and diagnosis of cardiovascular problems.
+When to Get Tested:
+Not a routine test; recommended if triglyceride levels are high or if there are risk factors.
+Conditions associated with high triglycerides include type 2 diabetes, obesity, certain medications, and significant alcohol consumption.
+Interpreting Test Results:
+LDL cholesterol level listed in mg/dL.
+Desirable to have levels below 100 mg/dL.
+Interpretation considers overall health, age, sex, family history, and additional risk factors.
+Follow-Up:
+Consistency in test method recommended for accurate result comparison.
+Doctor's interpretation crucial, taking into account various factors.
+Further tests and treatments may be recommended based on results and overall health.
