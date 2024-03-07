@@ -44,7 +44,7 @@ export function UploadPDF() {
 
   const onSubmit = async (data: any) => {
     try {
-      const apiURL = process.env.REACT_APP_GD_API_URL ? process.env.REACT_APP_GD_API_URL : "http://localhost:8000/blood-test";
+      const apiURL = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL : "http://localhost:8000/blood-test";
       const url = new URL(apiURL);
       const formData = new FormData();
       formData.append("upload_file", data.file[0]);
