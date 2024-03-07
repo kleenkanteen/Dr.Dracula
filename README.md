@@ -4,10 +4,9 @@
 </div>
   <h1 align="center">Dr. Dracula</h1>
    <h3 align="center">Simplifying Blood Test Analysis for Personalized Health Insights</h3>
-
 ## Application Description
 
-APP DESCRIPTION
+A web application that allows users to understand their blood test results quick easy using AI.
 
 ## Table of Contents
 
@@ -17,7 +16,6 @@ APP DESCRIPTION
 - [Application Description](#application-description)
 - [Table of Contents](#table-of-contents)
 - [Demo](#demo)
-- [Screenshots](#screenshots)
 - [Technology Stack](#technology-stack)
 - [Features](#features)
 - [How to use the app locally](#how-to-use-the-app)
@@ -29,24 +27,21 @@ APP DESCRIPTION
  
 ## Demo
 
-[View Demo Video](https://link.com)
-
-## Screenshots
+[View Demo Video]([https://link.com](https://dr-dracula.vercel.app/))
 
 
 ## Technology Stack
 
 | Technology                                                    | Description                                                          |
 | ------------------------------------------------------------- | -------------------------------------------------------------------- |
-| Python                                                      | a high-level, general-purpose programming language  |
-| FastAPI                                                      | a modern web framework for building RESTful APIs in Python |
-| Next.js                                                      | an open-source web development framework  |
-| JavaScript                                                      | a programming language and core technology of the World Wide Web |
-| shadcdn                                                      | a CLI for adding components to projects |
-| OpenAI Python library                                                      | provides convenient access to the OpenAI REST API from any Python 3.7+ application |
-| Fitz (PyMuPDF)                                                      | a high-performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents |
-| BeautifulSoup4                                                      | a library that makes it easy to scrape information from web pages |
-| stack name                                                      | stack descr. |
+| TypeScript                                                    | TypeScript is a free and open source programming language developed and maintained by Microsoft.
+| FastAPI                                                       | a modern, fast (high-performance), web framework for building APIs with Python.
+| Next.js                                                       | Next.js is a popular open-source React framework for building web applications.
+| ShadCn                                                        | Beautifully designed components that you can copy and paste into your apps.
+| OpenAI Python Library                                         | A library that allows developers to interact with OpenAI's powerful models.
+| JavaScript                                                    | A versatile and widely used programming language, primarily known for its role in web development.
+| PyMuPDF                                                       | A library used for dealing with PDF files in Python.
+| Beautiful Soup 4                                              | A library used for web scraping in Python.
 
 
 ## Features

@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-
+import { useState } from "react"
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -20,6 +20,8 @@ import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import markdownit from 'markdown-it';
+
 
 // commenting out because of a type error on FileList. due to nextjs 14 issue. 
 // the server does not have access to FileList, which is a browser API. idk why when this file is client compoennt
@@ -30,8 +32,8 @@ const formSchema = z.object({
 });
 
 export function UploadPDF() {
+  const [bloodReport, setBloodReport] = useState("");
   const { setTheme } = useTheme()
-
   setTheme("dark");
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -40,54 +42,86 @@ export function UploadPDF() {
 
   const fileRef = form.register("file");
 
-  const onSubmit = (data: any) => {
+  const onSubmit = async (data: any) => {
     try {
-      const url = new URL("http://localhost:8000/blood-test");
+      const apiURL = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL : "http://localhost:8000/blood-test";
+      const url = new URL(apiURL);
       const formData = new FormData();
-      formData.append("file", data.file[0]);
+      formData.append("upload_file", data.file[0]);
 
       const fetchOptions = {
         method: "POST",
         body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Request-Headers": "*",
+          "Access-Control-Request-Method": "*"
+        },
       };
-
-      fetch(url, fetchOptions);
+      
+      setBloodReport("Analyzing data....");
+      
+      let result = await fetch(url, fetchOptions);
       console.log("uploaded file:", data.file[0].name);
-    }
-    catch {
-      console.log("failed to upload file");
+
+      // clear file input
+      let fileInput = (document.getElementById("blood-pdf") as HTMLInputElement);
+      fileInput.value = "";
+
+      let json_res = await result.json();
+      const md = markdownit()
+      const md_res = md.render(json_res["report"]);
+
+      setBloodReport(md_res);
+    } catch(error){
+      console.error("failed to upload file: " + error);
     }
   };
 
   return (
-    <Card className="lg:max-w-md w-full upload-blood-card">
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="w-full p-10">
+    <>
+      <Card className="lg:max-w-md w-full upload-blood-card">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="w-full p-10">
+            <CardHeader>
+              <CardTitle>Upload PDF</CardTitle>
+              <CardDescription>Upload your blood test results</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <FormField
+                control={form.control}
+                name="file"
+                render={({ field }) => {
+                  return (
+                    <FormItem>
+                      <FormControl>
+                        <Input id="blood-pdf" type="file" {...fileRef} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  );
+                }}
+              />
+            </CardContent>
+            <CardFooter>
+              <Button type="submit">Upload</Button>
+            </CardFooter>
+          </form>
+        </Form>
+      </Card>
+      {bloodReport ? (
+        <Card className="w-full results-card">
           <CardHeader>
-            <CardTitle>Upload PDF</CardTitle>
-            <CardDescription>Upload your blood test results</CardDescription>
+            <CardTitle>Report</CardTitle>
+            <CardDescription>Report Analysis of biomarker data</CardDescription>
           </CardHeader>
           <CardContent>
-            <FormField
-              control={form.control}
-              name="file"
-              render={({ field }) => {
-                return (
-                  <FormItem>
-                    <FormControl>
-                      <Input id="blood-pdf" type="file" {...fileRef} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                );
-              }}
-            />
+            <div dangerouslySetInnerHTML={{ __html: bloodReport }} />
           </CardContent>
-          <CardFooter>
-            <Button type="submit">Upload</Button>
-          </CardFooter>
-        </form>
-      </Form>
-    </Card>
+        </Card>
+      ): null}
+      
+    </>
+    
   )
 }
