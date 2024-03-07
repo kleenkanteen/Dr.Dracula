@@ -1,27 +1,29 @@
+import logging
 import os
 import time
-from typing import Union, Annotated
-from fastapi.middleware.cors import CORSMiddleware
-
 import uuid
+from typing import Annotated, Union
 
-from fastapi import FastAPI
-from fastapi import File, Form, UploadFile
+from fastapi import FastAPI, File, Form, UploadFile
 from fastapi.encoders import jsonable_encoder
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-
 from openai import OpenAI
 
-import logging
 logger = logging.getLogger(__name__)
 
 from dotenv import load_dotenv
+
 load_dotenv()
 
 app = FastAPI()
 
 origins = [
     "http://localhost:3000",
+    "http://localhost:80",
+    "http://localhost",
+    "https://localhost",
+    "https://localhost:80",
     "https://dr-dracula-61s3.vercel.app/",
     "https://dr-dracula-leap-2024.vercel.app/"
 ]
