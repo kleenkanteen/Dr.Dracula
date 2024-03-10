@@ -34,7 +34,7 @@ A web application that allows users to understand their blood test results quick
 
 ## Watch the Pitch presentation
 
-[Watch project pitch](https://drive.google.com/file/d/1TrMM3qNxtQA3xKL4xg5pOeo0lgBatu4m/view)
+[Watch project pitch](https://www.loom.com/share/a911c053b18149b49419152ad9d4c25e?sid=e3a11272-9f17-49f3-a463-461b60a29e09)
 
 
 
