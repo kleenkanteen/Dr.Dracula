@@ -112,10 +112,13 @@ async def upload_pdf(
         for item in biomarker_values:
             f.write(f"{item}\n")
     
-    analysis = {}
+    analysis = []
     client = OpenAI()
     for biomarker in biomarker_values:
+        # analysis.append(biomarker)
         medical_reference = supabase.table("biomarker_reference").select("*").eq("biomarker", biomarker['biomarker']).execute()
+        if len(medical_reference.data) == 0:
+            continue
 
         query = f"""
         Context information is below.
@@ -123,25 +126,22 @@ async def upload_pdf(
         Biomarker: {medical_reference.data[0]['biomarker']}
         About the test: {medical_reference.data[0]['about']}
         Interpretation: {medical_reference.data[0]['interpreting_result']}
-        Source: {medical_reference.data[0]['source']}
         ---------------------
         Given the context information and not prior knowledge, answer the query.
-        Query: Here is a biomarker:{biomarker['biomarker']}. The test result is {biomarker['value']} {biomarker['measuring_unit']}. The normal range is {biomarker['normal_range']}.
+        Query: Here is a biomarker:{biomarker['biomarker']}. The test result is {biomarker['value']} {biomarker['measuring_unit']}. The normal range is {biomarker['normal_range']}. Append the link {medical_reference.data[0]['source']} at the end prefixed with "Source: ".
         Answer: 
         """
 
         chat_completion = client.chat.completions.create(
             messages=[
                 {"role": "system", "content": "You are a medical doctor who is adept at reading blood tests and giving concise explanations."},
-                {"role": "user", "content": f"Here is a biomarker:{biomarker['biomarker']}. The test result is {biomarker['value']} {biomarker['measuring_unit']}. The normal range is {biomarker['normal_range']}. Using the following information, explain what the test is about and if the. "},
+                {"role": "user", "content": query},
             ],
             model="gpt-3.5-turbo",
         )
+        analysis.append(chat_completion.choices[0].message.content)
 
-
-
-    
     return {
-        "file_size": len(file),
+        "analysis": analysis,
         "biomarker_values": biomarker_values,
     }

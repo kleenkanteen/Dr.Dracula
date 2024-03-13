@@ -11,4 +11,4 @@ biomarker = {'biomarker': 'Glucose Fasting', 'value': 4.1, 'measuring_unit': 'mm
 
 medical_reference = supabase.table("biomarker_reference").select("*").eq("biomarker", "Non-High Density Lipoprotein Cholesterol Testing").execute()
 
-print(medical_reference.data)
+print(medical_reference.data[0]["biomarker"])
