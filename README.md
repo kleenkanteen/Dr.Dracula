@@ -1,14 +1,14 @@
 <!-- Designed for LEAP24 hackathon 03.2024-->
 <div id="header" align="center">
-  <img src="./frontend/src/assets/img/drdracula-logo.png"/>
+  <img src="./frontend/src/assets/img/vampire.jpg"/>
 
 </div>
   <h1 align="center">Dr. Dracula</h1>
-   <h3 align="center">Simplifying Blood Test Analysis for Personalized Health Insights</h3>
+   <h3 align="center">Simplifying your blood test analysis</h3>
 
-## Application Description
+## Description
 
-A web application that allows users to understand their blood test results quick easy using AI.
+A website that allows you to understand your blood test results by simply uploading a PDF of your results.
 
 ## Table of Contents
 
@@ -21,8 +21,7 @@ A web application that allows users to understand their blood test results quick
 - [Technology Stack](#technology-stack)
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [How to use the app locally](#how-to-use-the-app)
-- [Using Docker to run the app](#using-docker-to-run-the-app)
+- [Developement Guide](#how-to-use-the-app)
 - [Authors](#authors)
 - [License](#license)
 
@@ -34,36 +33,34 @@ A web application that allows users to understand their blood test results quick
 
 ## Watch the Pitch
 
-[Watch project pitch](https://www.loom.com/share/a911c053b18149b49419152ad9d4c25e?sid=e3a11272-9f17-49f3-a463-461b60a29e09)
-
+[Watch project pitch](https://lablab.ai/event/leap-2024-hackathon/dracula/dr-dracula)
 
 
 ## Technology Stack
 
 | Technology                                                    | Description                                                          |
 | ------------------------------------------------------------- | -------------------------------------------------------------------- |
-| TypeScript                                                    | TypeScript is a free and open source programming language developed and maintained by Microsoft.
-| FastAPI                                                       | a modern, fast (high-performance), web framework for building APIs with Python.
-| Next.js                                                       | Next.js is a popular open-source React framework for building web applications.
-| ShadCn                                                        | Beautifully designed components that you can copy and paste into your apps.
-| OpenAI Python Library                                         | A library that allows developers to interact with OpenAI's powerful models.
-| JavaScript                                                    | A versatile and widely used programming language, primarily known for its role in web development.
-| PyMuPDF                                                       | A library used for dealing with PDF files in Python.
-| Beautiful Soup 4                                              | A library used for web scraping in Python.
+| TypeScript                                                    | The one and only.
+| FastAPI                                                       | Modern web framework for building APIs with Python.
+| Next.js                                                       | The goat.
+| ShadCn                                                        | Beautifully designed components.
+| OpenAI Python Library                                         | Library to interact with OpenAI's models.
+| PyMuPDF                                                       | PDF reading library.
+| Beautiful Soup 4                                              | Web scraping library.
 
 
 ## Features
 
-- Seamless PDF upload for blood test analysis.
-- Automated biomarker extraction from uploaded PDFs.
-- In-depth analysis, comparison with medical sources, and comprehensive report generation.
+- PDF upload for blood test analysis.
+- Automated biomarker extraction from PDF.
+- Analysis generated using comparison with vetted medical source, testing.com.
 
 
 ## Screenshots
 ![pic111](https://github.com/kleenkanteen/Dr.Dracula/assets/19821445/bcbd74d8-7a34-4444-888e-9edae922f2f4)
 ![pic222](https://github.com/kleenkanteen/Dr.Dracula/assets/19821445/3157c83e-abcf-45fb-8240-ebb00053982b)
 
-## How to use the app locally
+## Developement Guide
 
 **Step #1** - Clone the project
 
@@ -77,32 +74,9 @@ $ git clone https://github.com/kleenkanteen/leap-hackathon
 - Run `yarn run dev` to run the nextjs frontend
 - Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-In a separate terminal, do this:
-- `cd` into the `backend` folder. Now type `pip install -r requirements.txt` to install the python dependencies.
+In a separate terminal:
+- `cd` into the `backend` folder. Run `pip install -r requirements.txt` to install the python dependencies.
 - Run `uvicorn main:app --reload` to run the fastapi server on port 8000 with hot reload on.
-
-
-## Using Docker to run the app
-
-**Using Docker Compose**
-
-```bash
-docker-compose up --build
-```
-
-**Pull the image from Docker Hub**
-
-**Step #1**
-
-```bash
-docker pull sandramsc/leap-hackathon
-```
-
-**Step #2**
-```bash
-docker run -p 3000:3000 sandramsc/leap-hackathon
-```
-
 
 ## Authors
 
