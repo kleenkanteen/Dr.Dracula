@@ -10,6 +10,8 @@
 
 A website that allows you to understand your blood test results by simply uploading a PDF of your results.
 
+The backend is down as it uses the OpenAI Assistants API which is expensive.
+
 ## Table of Contents
 
 <details>
